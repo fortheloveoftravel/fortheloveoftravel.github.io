@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 <!-- Title -->
-<title>For The<strong> Love of Travel</strong></title>
+<title>Take Me Away</strong></title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -53,7 +53,7 @@
         
         <!-- Middle -->
         <div class="container container-wide v-bottom padding-v-80">
-            <h1 class="text-lg margin-b-0"> For the <strong>Love of Travel</strong></h1>
+            <h1 class="text-lg margin-b-0"> Take Me <strong>Away</strong></h1>
             <h5 class="text-tertiary margin-b-40">Your best travel consultant</h5>
             <span data-target="local-scroll"><a href="index-architecture-mobile.html#resume" class="btn btn-lg btn-primary"><span>Who are we ?</span><i class="ti-arrow-down"></i></a></span>
             <a href="index-architecture-mobile.html#" class="btn btn-link" data-target="messenger"><span>Use Contact Form</span><i class="ti-email"></i></a>
@@ -389,7 +389,24 @@ window.paceOptions = {
 <script src="assets/js/core.min.js"></script>
 
 <!-- Google Map API -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgn5_naARvVQz24qkgGebuks1I51wIL6k&callback=initMap&v=3.exp&sensor=false"></script>
+  <script>
+    var map;
+    function initialize() {
+        var mapOptions = {
+            zoom: 8,
+            center: new google.maps.LatLng(12.971572, 79.158781),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+  mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    function pan() {
+        var panPoint = new google.maps.LatLng(document.getElementById("lat").value, document.getElementById("lng").value);
+        map.panTo(panPoint)
+     }
+</script>
 
 <!-- Styleswitcher -->
 <script src="assets/styleswitcher/styleswitcher.js"></script>
