@@ -59,10 +59,13 @@ a:hover, a:focus,
 
 /* Tertiary */
 
-.text-tertiary,
+.text-tertiary{
+	font-color: #b7b7b7;
+	}
+
 .btn-tertiary:hover, .btn-tertiary:focus,
 .icon-tertiary.icon-hover:hover, .icon-tertiary.icon-hover:focus {
-	color: #fff;
+	color: #b7b7b7;
 	font-style: italic;
 }
 
