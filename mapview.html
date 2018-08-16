@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   <!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3BC4pJyOg1LTKFYkZT2cNSQpDk0Cx0OY";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zopim Live Chat Script-->
+                    <title>Mapview </title>
+            <meta name = "keywords" content = "Mapview">
+            <meta name = "DESCRIPTION" content = "Mapview">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Latest compiled and minified CSS -->
+        <link type="text/css" rel="stylesheet" href="assets/frontend/css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/style.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/colorbox.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/ionicons.min.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/slicknav.css" />
+<script type="text/javascript" src="assets/js/jquery.min-1.7.1.js"></script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+<script type="text/javascript" src="assets/js/placeholder.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="assets/frontend/js/bootstrap-slider.js"></script>
+<script type="text/javascript" src="assets/frontend/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jqeasy.dropdown.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="assets/frontend/js/typeahead.js"></script>
+<script type="text/javascript" src="assets/frontend/js/frontend.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery.slicknav.js"></script>
+<script type="text/javascript" defer="defer">var site_url="http://www.holidaysbox.com/";</script>        <script type="text/javascript">
+            var $ = jQuery.noConflict();
+            function processForm() {
+                $(".newsletter").removeClass('success');
+                $(".newsletter").removeClass('error');
+                $(".newsletter").text();
+                var email = $('#InputEmail').val();
+                var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/igm;
+                if (!re.test(email)) {
+                    $(".newsletter").text("Please Enter Valid Email Address");
+                    return false;
+                } else {
+                    var url = site_url + 'newsletter';
+                    $.ajax({
+                        url: url,
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {
+                            name: email
+                        },
+                        success: function (data) {
+                            $(".newsletter").text(data.message);
+                            if (data.error == 1) {
+                                $(".newsletter").text(data.message);
+                            } else if (data.success == 1) {
+                                $(".newsletter").text(data.message);
+                            }
+                            $('#InputEmail').val("");
+                        }
+                    });
+                }
+            }
+            $(document).ready(function () {
+                $("#newsletter-popup").hide();
+                $("#newletter").click(function () {
+                    $("#newsletter-popup").slideToggle("slow");
+                });
+            });
+            $(document).ready(function () {
+                $('#menu').slicknav();
+            });
+        </script>
+        <link rel='stylesheet' id='style-css'  href='assets/frontend/css/jquery.fancybox.css' type='text/css' media='all'>
+            <div id="popup"><a class="fancybox-effects-a" href="#inline" title=""></a>
+        <div style="display:none;">
+            <div id="inline">
+                <div style="background: #fff; padding: 20px; display: block;">
+                    <h3 class="page-header" style="text-align:center">Welcome to Holidaybox</h3>
+                    <div class="destinaton-module">
+                        <div id="carousel-gene1" class="" data-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                                    <div class="item clearfix active"><!-- slides -->
+                                        <ul class="nav nav-pills">
+                                                                                            <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="poland/central-europe-blend.html"><img src="uploads/thumbnails/Krakow.jpg" height="150" width="215" title="Central Europe Blend" alt="Central Europe Blend" /></a>
+                                                        <div class="product-price"><span class="pricesymbol">`</span>
+                                                            108000 ONWARDS                                                        </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="poland/central-europe-blend.html">Central Europe Blend</a></h2>
+                                                            <h3>Europe - Poland</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDKw1I9ZlI-piCBp2zXSuviBDVRjju-aYI&sensor=true&libraries=adsense"> </script>        <script src="maps.googleapis.com/maps/api/js_v_3.exp.js&sensor=false"></script>        <script type="text/javascript" src="http://www.webestools.com/google_map_gen.js?lati=37.0625&long=-95.6770&zoom=4&width=675&height=400&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle=hello"></script>-->
+</head>
+<body class="js">
+    <!--header section-->
+    <div class="header-section">
+        <div class="center-block">
+            <h1 class="logo innerpage"><a href="index.html"><img src="assets/frontend/image/logo.png" width="300" title="Holidays Box" alt="Holidays Box"/></a></h1>
+        </div>
+        <div class="follow-module">
+            <ul class="nav nav-pills">
+                <li class="sociali facebook"><a href="https://www.facebook.com/holidaysbox" target="_blank" title="Like us on Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li class="sociali twtr"><a href="https://twitter.com/holidaysbox" target="_blank" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li class="sociali p"><a href="#" title="Follow us on Pinterest"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <div class="center-block-menu">
+                <div class="left-menu pull-left">
+                    <div class="right-menu pull-left"> <a href="destinations.html">
+                            <h3 class="newletter menua" style="padding: 0px 15px;">Holiday Destinations</h3>
+                        </a> </div>
+                    <div class="menu-container">
+                        <ul class="nav nav-pills pull-left"  id="menu">
+                          <!--<li class=""> <a class="menua"  href="destinations.html">Holiday Destinations </a></li>-->
+                            <li class="active menuli"><a class="menua"  href="index.html">Home</a></li>
+                                                            <li class="menuli "><a class="menua" href="about-us.html">About Us</a></li>
+                                                            <li class="menuli "><a class="menua" href="faq.html">Faq</a></li>
+                                                            <li class="menuli "><a class="menua" href="careers.html">Careers</a></li>
+                                                            <li class="menuli "><a class="menua" href="mice-tours.html">MICE Tours</a></li>
+                            <!--<li class=""> <a class="menua"  href="">MICE Tours </a></li>-->
+                            <li class="menuli"> <a style="border-right:none !important" class="menua"  href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-menu pull-right">
+                    <h3 class="newletter" id="newletter">Newsletter<img class="plus" src="assets/frontend/image/plus-icon.png" alt=""/></h3>
+                    <div class="newsletter-popup clearfix" id="newsletter-popup" style="display:none">
+                                                <div class="newsletter"> </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-xs-8 no-padding" style="padding-right: 0px;"> <input type="email" name="email" value="" id="InputEmail" placeholder="Enter Email ID" class="form-control newsletter-input" style=""  /> </div>
+                            <div class="col-lg-4 col-xs-4"><a onclick = "processForm();" class = "btn btn-primary">SUBMIT</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="contact-module">                		<a href="#" class="pop-btn" data-toggle="popover" data-html="true" data-content="<div><b>Popover Example</b> 1 - Content</div>" title="Popover Example <b>1</b> - Title"><span class="glyphicon glyphicon-map-marker"></span></a>                                                <a href="#" tabindex="0" class="btn btn-lg btn-danger pop-btn" role="button" data-toggle="popover" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>                                                <a data-original-title="Delete" href="#" title="" data-toggle="tooltip" data-placement="right" class="pop-btn confirm clr-red"><i class="fa fa-trash-o "></i></a>                                                        <address>                                    <abbr title="Phone"><strong><span class="circle-blue"><i class="glyphicon glyphicon-phone-alt tele-icon"></i></span> Call Us:</strong></abbr> 0091-9833835566  /   0091-9322451334<br>                                    <span style="padding-left:70px"><strong><span class="circle-blue"><i class="glyphicon glyphicon-envelope tele-icon"></i></span> Email US:</strong> <a href="mailto:info@holidaysbox.com">info@holidaysbox.com</a></span>                                </address>                            </div>--> </div>
+        </div>
+    </div>
+    <div class="banner"> <!--banner-->
+                        <div class="banner-module">
+                    <div class="overlay"></div>
+                    <div class="center-section">
+                        <!--<h2 class="static-header"></h2>-->
+                    </div>
+                </div>
+                            <div class="bottom-slide innerpage">
+                <div class="slide-center_section  row">
+                                            <div class="col-sm-2 col-md-2 col-lg-2"> 
+                            <span class="pull-left">
+                                <p class="select-text">SELECT YOUR</p>
+                                <h1 class="holiday-text">HOLIDAYS</h1>
+                            </span> 
+                        </div>
+                                            <div class="col-sm-10 col-md-10 col-lg-10 right-box col-md-offset-2">
+                        <div class="pull-left">
+                            <form action="search.html" id="formsearch"  method="post" accept-charset="utf-8">                            
+                            <input type="text" value="" class="form-control pull-left search-box typeahead" id="search-box" placeholder="Enter your destination:Country" autocomplete="off" style="width:530px; margin: 0px;">
+                            <input type="hidden" id="searchkey" name="searchkey" class="form_control"/>
+                            <input type="submit" class="btn btn-info green-btn search" id="search" value="Search"/>
+                            <div class="alert alert-danger clear" id="error" style="display:none; padding:7px 10px;">Required</div>
+</form> </div>
+                        <span class="pull-right list-style"><i><a href="destinations.html" class="glyphicon glyphicon-th" title="List view">&nbsp;</a></i> <i><a href="mapview.html" class="glyphicon glyphicon-globe" title="Map view">&nbsp;</a></i></span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-6991837-68', 'auto');
+        ga('send', 'pageview');
+    </script>
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 849402052;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="googleads.g.doubleclick.net/pagead/viewthroughconversion/849402052/_guid_ON_amp_script_0.gif"/>
+</div>
+</noscript>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '227441094429491'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="www.facebook.com/tr_id_227441094429491_ev_PageView_noscript_1.gif"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">
+    window._tfa = window._tfa || [];
+    _tfa.push({ notify: 'action',name: 'Visit_Seychelles' });
+</script>
+<script src="cdn.taboola.com/libtrc/tsbi-sc/tfa.js"></script>
+<style>
+    html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+    }
+    #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+    }
+</style>
+<!--<script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+<script src="https://raw.githubusercontent.com/malsup/form/master/jquery.form.js"></script>
+<script src="maps.googleapis.com/maps/api/js_v_3.exp.js&sensor=false"></script>-->
+<script src="maps.googleapis.com/maps/api/js_v_3.exp.js"></script>
+<!--<script type="text/javascript" src="http://www.holidaysbox.com//assets/frontend/js/jquery-1.10.2.js"></script>-->
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
+<script>
+    $(document).ready(function () {
+        var map;
+        var elevator;
+        var i =0;
+        var temp = new Array();
+        var loc = new Array();
+        var location;
+        var marker;
+        var markers = new Array();
+        var infowindow ;
+        var styleArray = [
+            {
+                featureType: "all",
+                stylers: [
+                    { saturation: -80 }
+                ]
+            },{
+                featureType: "road.arterial",
+                elementType: "geometry",
+                stylers: [
+                    { hue: "#00ffee" },
+                    { saturation: 50 }
+                ]
+            },{
+                featureType: "poi.business",
+                elementType: "labels",
+                stylers: [
+                    { visibility: "off" }
+                ]
+            }
+        ];
+        $.ajax({
+            url: site_url+"ajaxgoogleEvent",
+            cache:false,
+            dataType:'json',
+            success: function(data) {
+                if(data != ''){
+                    var infos = [];
+                    var center = new google.maps.LatLng(-4.61176, 55.45409);
+                    var options = {
+                        'zoom': 2,
+                        'center': center,
+                        'mapTypeId': google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById("map-canvas"), options);
+                    var count=0;
+                    var digit=0.8;
+                    var iconBase = site_url + 'assets/frontend/image/';
+                    var markers = [];
+                    var gmarkers = [];
+                    var gmarkers = [];
+                    for (i = 0; i < data.search.length; i++) {
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(data.search[i].lat, data.search[i].lng),
+                            draggable: false,
+                            icon: iconBase + 'gmap_pin.png',
+                            map: map
+                        });
+ var content = "<div class='gmapdetails'><a class='package-image' href='"+site_url+data.search[i].cntry+'/'+data.search[i].id+"'><img src="+data.search[i].icon+" height='100' width='100'></a><p><a class='package-name' href='"+site_url+data.search[i].cntry+'/'+data.search[i].id+"'>"+data.search[i].title+"</a></p><p class='price-value'><span class='pricesymbol'>`</span>&nbsp;"+data.search[i].price+"&nbsp;ONWARDS</p></div>";
+//                        var content = "<div class='gmapdetails'><span><p><a href='"+site_url+'detail/'+data.search[i].id+"'>"+data.search[i].title+"</a></p></span>\n\<span><p><span class='pricesymbol'>`</span>&nbsp;"+data.search[i].price+"&nbsp;ONWARDS</p></span>\n\<a href='"+site_url+'detail/'+data.search[i].id+"'><img src="+data.search[i].icon+" height='50' width='50'></a></div>";
+                        var infowindow = new google.maps.InfoWindow();
+                        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                            return function() {
+                                /* close the previous info-window */
+                                closeInfos();
+                                infowindow.setContent(content);
+                                infowindow.open(map,marker);
+                                /* keep the handle, in order to close it on next click event */
+                                infos[0]=infowindow;
+                            };
+                        })(marker,content,infowindow));
+                        gmarkers.push(marker);
+                    }
+                    function closeInfos(){
+                        if(infos.length > 0){
+                            /* detach the info-window from the marker ... undocumented in the API docs */
+                            infos[0].set('marker', null);
+                            /* and close it */
+                            infos[0].close();
+                            /* blank the array */
+                            infos.length = 0;
+                        }
+                    }
+                    var markerCluster = new MarkerClusterer(map, gmarkers);
+                    //                    for (i = 0; i < data.length; i++) {
+                    //                        var infowindow = new google.maps.InfoWindow({
+                    //                            maxWidth: 160
+                    //                        }); 
+                    //                        var latLng = new google.maps.LatLng(data[i].lat, data[i].lng);
+                    //                        var marker = new google.maps.Marker({'position': latLng,'title':data[i].title, icon: iconBase + 'gmap_pin.png'});
+                    //                        
+                    //                        markers.push(marker);
+                    //                    }
+                    //                    
+                    //                    var markerCluster = new MarkerClusterer(map, markers);
+                    //                     
+                    //                    google.maps.event.addListener(marker, 'click', (function(marker,infowindow) {
+                    //                        //   
+                    //                        console.log(i);
+                    //                        return function() { 
+                    //                                   
+                    //                            var content = "<div><span><p><a href='"+site_url+'detail/'+data[i].id+"'>"+data[i].title+"</a></p></span>\n\<span><p><span class='pricesymbol'>`</span>&nbsp;"+data[i].price+"&nbsp;ONWARDS</p></span>\n\<a href='"+site_url+'detail/'+data[i].id+"'><img src="+data[i].icon+" height='50' width='50'></a></div>"                                    
+                    //                            
+                    //                            infowindow.setContent(content);
+                    //                            infowindow.open(map, marker);
+                    //                        }
+                    //                    })(marker,infowindow));
+                    count=count+digit;  
+                    //                    var markerCluster = new MarkerClusterer(map, gmarkers);
+                }
+                //                }
+            }
+        });
+        $('.formsearch').on('change',function(event){             
+            event.preventDefault();
+            $.ajax({
+                url: site_url+"ajaxgoogleEvent",
+                cache:false,
+                data:$( this ).serializeArray() ,
+                dataType:'json',
+                success: function(data) {
+                    infowindow = new google.maps.InfoWindow({
+                        maxWidth: 160
+                    }); 
+                    if(data != ''){
+                        var infos = [];
+                        var center = new google.maps.LatLng(data.contrylat, data.contrylag);
+                        var options = {
+                            'zoom':5,
+                            'center': center,
+                            'mapTypeId': google.maps.MapTypeId.ROADMAP
+                        };
+                        var map = new google.maps.Map(document.getElementById("map-canvas"), options);
+                        var count=0;
+                        var digit=0.8;
+                        var iconBase = site_url + 'assets/frontend/image/';
+                        var markers = [];
+                        var gmarkers = [];
+                        var gmarkers = [];
+                        for (i = 0; i < data.search.length; i++) {
+                            console.log(data.search[i].lat);
+                            var marker = new google.maps.Marker({
+                                position: new google.maps.LatLng(data.search[i].lat, data.search[i].lng),
+                                draggable: false,
+                                icon: iconBase + 'gmap_pin.png',
+                                map: map
+                            });
+ var content = "<div class='gmapdetails'><a class='package-image' href='"+site_url+data.search[i].cntry+'/'+data.search[i].id+"'><img src="+data.search[i].icon+" height='100' width='100'></a><p><a class='package-name' href='"+site_url+'detail/'+data.search[i].id+"'>"+data.search[i].title+"</a></p><p class='price-value'><span class='pricesymbol'>`</span>&nbsp;"+data.search[i].price+"&nbsp;ONWARDS</p></div>";
+//                            var content = "<div class='gmapdetails'><span><p><a href='"+site_url+'detail/'+data.search[i].id+"'>"+data.search[i].title+"</a></p></span>\n\<span><p><span class='pricesymbol'>`</span>&nbsp;"+data.search[i].price+"&nbsp;ONWARDS</p></span>\n\<a href='"+site_url+'detail/'+data.search[i].id+"'><img src="+data.search[i].icon+" height='50' width='50'></a></div>";
+                            var infowindow = new google.maps.InfoWindow();
+                            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                                return function() {
+                                    /* close the previous info-window */
+                                    closeInfos();
+                                    infowindow.setContent(content);
+                                    infowindow.open(map,marker);
+                                    /* keep the handle, in order to close it on next click event */
+                                    infos[0]=infowindow;
+                                };
+                            })(marker,content,infowindow));
+                            gmarkers.push(marker);
+                        }
+                        function closeInfos(){
+                            if(infos.length > 0){
+                                /* detach the info-window from the marker ... undocumented in the API docs */
+                                infos[0].set('marker', null);
+                                /* and close it */
+                                infos[0].close();
+                                /* blank the array */
+                                infos.length = 0;
+                            }
+                        }
+                        var markerCluster = new MarkerClusterer(map, gmarkers);
+                        //                    for (i = 0; i < data.length; i++) {
+                        //                        var infowindow = new google.maps.InfoWindow({
+                        //                            maxWidth: 160
+                        //                        }); 
+                        //                        var latLng = new google.maps.LatLng(data[i].lat, data[i].lng);
+                        //                        var marker = new google.maps.Marker({'position': latLng,'title':data[i].title, icon: iconBase + 'gmap_pin.png'});
+                        //                        
+                        //                        markers.push(marker);
+                        //                    }
+                        //                    
+                        //                    var markerCluster = new MarkerClusterer(map, markers);
+                        //                     
+                        //                    google.maps.event.addListener(marker, 'click', (function(marker,infowindow) {
+                        //                        //   
+                        //                        console.log(i);
+                        //                        return function() { 
+                        //                                   
+                        //                            var content = "<div><span><p><a href='"+site_url+'detail/'+data[i].id+"'>"+data[i].title+"</a></p></span>\n\<span><p><span class='pricesymbol'>`</span>&nbsp;"+data[i].price+"&nbsp;ONWARDS</p></span>\n\<a href='"+site_url+'detail/'+data[i].id+"'><img src="+data[i].icon+" height='50' width='50'></a></div>"                                    
+                        //                            
+                        //                            infowindow.setContent(content);
+                        //                            infowindow.open(map, marker);
+                        //                        }
+                        //                    })(marker,infowindow));
+                        count=count+digit; 
+                    }
+                }
+            });
+        })
+        //        function createMap(){
+        //
+        //            var myOptions = {
+        //                zoom:2,
+        //                center: new google.maps.LatLng(0, 0),
+        //                mapTypeId: 'terrain'
+        //            };
+        //            infowindow = new google.maps.InfoWindow({
+        //                maxWidth: 160
+        //            });  
+        //            map = new google.maps.Map($('#map-canvas')[0], myOptions);
+        //            var count=0;
+        //            var digit=0.8;
+        //            //            var iconBase = site_url + 'assets/frontend/image/';
+        //            for (var x = 0; x < data.length; x++) {
+        //                
+        //                //alert(location[x].location);
+        //                if(location[x].location){
+        //                    temp.push(data[x])
+        //                   
+        //                    var a = loc.indexOf(location[x].location);
+        //                    
+        //                    if(a > -1){
+        //                        
+        //                        var center = new google.maps.LatLng(-4.61176, 55.45409);
+        //                        var options = {
+        //                            'zoom': 5,
+        //                            'center': center,
+        //                            'mapTypeId': google.maps.MapTypeId.ROADMAP
+        //                        };
+        //
+        //                        var map = new google.maps.Map(document.getElementById("map-canvas"), options);
+        //
+        //                        var markers = [];
+        //                        for (i = 0; i < data.length; i++) {
+        //                            var latLng = new google.maps.LatLng(data[i].lat, data[i].lng);
+        //                            var marker = new google.maps.Marker({'position': latLng});
+        //                            markers.push(marker);
+        //                        }
+        //                        var markerCluster = new MarkerClusterer(map, markers);
+        //                        count=digit;
+        //                        url = 'http://maps.googleapis.com/maps/api/geocode/json?address='+location[x].location+'&sensor=false';
+        //                        $.getJSON(url, null, function (data) {
+        //                                                
+        //                                                    
+        //                                                    
+        //                                                    
+        //                            var p = data.results[0].geometry.location
+        //                                                   
+        //                            var newLat = p.lat + count;// * (Math.random() * (max - min) + min);
+        //                            var newLng = p.lng + count;// * (Math.random() * (max - min) + min);
+        //                            //                            alert(newLat)
+        //                            //                            alert(newLng)
+        //                            //                            
+        //                            var latlng = new google.maps.LatLng(newLat, newLng);
+        //                            console.log("if");
+        //                            console.log(latlng);
+        //                            console.log(a);
+        //                            var marker =  new google.maps.Marker({
+        //                                position: latlng,
+        //                                map: map,
+        //                                icon: iconBase + 'gmap_pin.png'
+        //                        
+        //                            });
+        //                                                      
+        //                            markers.push(marker);
+        //                                                           
+        //                            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        //                                                        
+        //                                return function() { 
+        //                                                           
+        //                                    var content = "<div><span><p><a href='"+site_url+'detail/'+temp[i].id+"'>"+temp[i].title+"</a></p></span>\n\<span><p><span class='pricesymbol'>`</span>&nbsp;"+temp[i].price+"&nbsp;ONWARDS</p></span>\n\<a href='"+site_url+'detail/'+temp[i].id+"'><img src="+temp[i].icon+" height='50' width='50'></a></div>"                                    
+        //                        //                                    infowindow.setContent(content);
+        //                        //                                    infowindow.open(map, marker);
+        //                        //                                }
+        //                        //                            })(marker, i++));     
+        //                        //                            count=count+digit;    
+        //                        //                        });
+        //                          
+        //                    }else {
+        //                    
+        //                        var center = new google.maps.LatLng(-4.61176, 55.45409);
+        //                        var options = {
+        //                            'zoom': 5,
+        //                            'center': center,
+        //                            'mapTypeId': google.maps.MapTypeId.ROADMAP
+        //                        };
+        //
+        //                        var map = new google.maps.Map(document.getElementById("map-canvas"), options);
+        //
+        //                        var markers = [];
+        //                        for (i = 0; i < data.length; i++) {
+        //                            var latLng = new google.maps.LatLng(data[i].lat, data[i].lng);
+        //                            var marker = new google.maps.Marker({'position': latLng});
+        //                            markers.push(marker);
+        //                        }
+        //                        var markerCluster = new MarkerClusterer(map, markers);
+        //                    
+        //                        //                        loc.push(location[x].location); 
+        //                        //                        url = 'http://maps.googleapis.com/maps/api/geocode/json?address='+location[x].location+'&sensor=false';
+        //                        //                        $.getJSON(url, null, function (data) {
+        //                        //                        
+        //                        //
+        //                        //                            var p = data.results[0].geometry.location
+        //                        //                            
+        //                        //                            var latlng = new google.maps.LatLng(p.lat, p.lng);
+        //                        //                            console.log("else");
+        //                        //                            console.log(latlng);
+        //                        //                            console.log(a);
+        //                        //                            var marker =  new google.maps.Marker({
+        //                        //                                position: latlng,
+        //                        //                                map: map,
+        //                        //                                icon: iconBase + 'gmap_pin.png'
+        //                        //
+        //                        //                            });
+        //                        //                                
+        //                        //                            markers.push(marker);
+        //                        //                                   
+        //                        //                            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        //                        //                                console.log('here2')
+        //                        //                                console.log(temp)
+        //                        //                                console.log(temp[i].id)
+        //                        //                                return function() {         
+        //                        //                                   
+        //                        //                                    var content = "<div><span><p><a href='"+site_url+'detail/'+temp[i].id+"'>"+temp[i].title+"</a></p></span>\n\<span><p><span class='pricesymbol'>`</span>&nbsp;"+temp[i].price+"&nbsp;ONWARDS</p></span>\n\<a href='"+site_url+'detail/'+temp[i].id+"'><img src="+temp[i].icon+" height='50' width='50'></a></img></div>"                                    
+        //                        //                                    infowindow.setContent(content);
+        //                        //                                    infowindow.open(map, marker);
+        //                        //                                }
+        //                        //                            })(marker, i++));     
+        //                        //                                
+        //                        //                        });
+        //                    }                   
+        //                    
+        //                    url = 'http://maps.googleapis.com/maps/api/geocode/json?address='+location[x].location+'&sensor=false';
+        //                    $.getJSON(url, null, function (data) {
+        //                        
+        //
+        //                        var p = data.results[0].geometry.location
+        //                        if(flag==1){
+        //                            alert(flag)
+        //                            p.lat+=0.5;
+        //                            p.lng+=0.5;
+        //                        }
+        //                        var latlng = new google.maps.LatLng(p.lat, p.lng);
+        //                        var marker =  new google.maps.Marker({
+        //                            position: latlng,
+        //                            map: map,
+        //                            icon: iconBase + 'schools_maps.png'
+        //
+        //                        });
+        //                                
+        //                        markers.push(marker);
+        //                                   
+        //                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        //                            return function() {                         
+        //                                var content = "<div><span><p>"+temp[i].title+"</p></span>\n\<span><p><span class="pricesymbol">`</span>&nbsp;"+temp[i].price+"&nbsp;ONWARDS</p></span>\n\<img src="+temp[i].icon+" height='50' width='50'></img></div>"                                    
+        //                                    infowindow.setContent(content);
+        //                                    infowindow.open(map, marker);
+        //                                }
+        //                            })(marker, i++));     
+        //                                                    
+        //                        });
+        //                    }
+        //                }
+        //            }
+    });
+    $(document).on('change','#continent',function(){
+        var val=$('#continent').val();
+        //        alert(val)
+        $.ajax({
+            url: site_url+"getcountry",
+            cache: false,
+            type: "GET",
+            dataType:'json',
+            data: {
+                id : val
+            },
+            success: function(data){   
+                var html_data='';
+                html_data='<label>Country</label><select name="subcountry" class="form-control" id="subcountry">';
+                $.each(data.country, function(k, v) {              
+                    html_data += '<option value="'+k+'">'+v+'</option>';                 
+                });
+                html_data +="</select>";
+                $(".subcountry").html(html_data);
+                var html_type='';
+                html_type='<label>Package Type</label><select name="type" class="form-control" id="type">';
+                $.each(data.pack, function(k, v) {              
+                    html_type += '<option value="'+k+'">'+v+'</option>';                 
+                });
+                html_type +="</select>";
+                $(".type").html(html_type);
+                var html_duration='';
+                html_duration='<label>Duration</label><select name="duration" class="form-control" id="duration">';
+                $.each(data.duration, function(k, v) {  
+                    if(k==0){
+                        html_duration += '<option value="'+k+'">All</option>'; 
+                    }else{
+                        html_duration += '<option value="'+k+'">'+(v-1)+' night '+v+' days</option>';                 
+                    }
+                });
+                html_duration +="</select>";
+                $(".duration").html(html_duration);
+            }
+        });
+    });
+    $(document).on('change','#subcountry',function(){
+        var val=$('#subcountry').val();
+        $.ajax({
+            url: site_url+"subcountry",
+            cache: false,
+            type: "GET",
+            dataType:'json',
+            data: {
+                id : val
+            },
+            success: function(data){   
+                var html_type='';
+                html_type='<label>Package Type</label><select name="type" class="form-control" id="type">';
+                $.each(data.pack, function(k, v) {              
+                    html_type += '<option value="'+k+'">'+v+'</option>';                 
+                });
+                html_type +="</select>";
+                $(".type").html(html_type);
+                var html_duration='';
+                html_duration='<label>Duration</label><select name="duration" class="form-control" id="duration">';
+                $.each(data.duration, function(k, v) {              
+                    if(k==0){
+                        html_duration += '<option value="'+k+'">All</option>'; 
+                    }else{
+                        html_duration += '<option value="'+k+'">'+(v-1)+' night '+v+' days</option>';                 
+                    }                 
+                });
+                html_duration +="</select>";
+                $(".duration").html(html_duration);
+            }
+        });
+    });
+    $(document).on('change','#type',function(){
+        var val=$('#type').val();
+        $.ajax({
+            url: site_url+"gettype",
+            cache: false,
+            type: "GET",
+            dataType:'json',
+            data: {
+                id : val
+            },
+            success: function(data){   
+                var html_duration='';
+                html_duration='<label>Duration</label><select name="duration" id="duration" class="form-control">';
+                $.each(data.duration, function(k, v) {              
+                    if(k==0){
+                        html_duration += '<option value="'+k+'">All</option>'; 
+                    }else{
+                        html_duration += '<option value="'+k+'">'+(v-1)+' night '+v+' days</option>';                 
+                    }                
+                });
+                html_duration +="</select>";
+                $(".duration").html(html_duration);
+            }
+        });
+    });
+</script>
+<div class="map-filters">
+    <div class="center-section">
+        <form action="index.html#" class="formsearch" method="post" accept-charset="utf-8">        <div class="row">
+<!--            <div class="col-sm-2 col-md-2">
+                <span class="continent">
+                    <label>Continent</label>                    <select name="country" id="continent" class="form-control">
+<option value="1">Africa</option>
+<option value="2">Antarctica</option>
+<option value="3">Asia</option>
+<option value="4">Europe</option>
+<option value="5">North America</option>
+<option value="6">Oceania</option>
+<option value="7">South America</option>
+<option value="0" selected="selected">All</option>
+</select>                </span>
+            </div>-->
+            <div class="col-sm-2 col-md-2">
+                <span class="subcountry">
+                    <label>Country</label>                    <select name="subcountry" id="subcountry" class="form-control">
+<option value="65">Armenia</option>
+<option value="69">Bhutan</option>
+<option value="122">Bulgaria</option>
+<option value="123">Croatia</option>
+<option value="238">Ecuador</option>
+<option value="15">Egypt</option>
+<option value="127">Estonia</option>
+<option value="212">Fiji</option>
+<option value="76">Georgia</option>
+<option value="133">Greece</option>
+<option value="77">Hong Kong</option>
+<option value="135">Iceland</option>
+<option value="78">India</option>
+<option value="79">Indonesia</option>
+<option value="137">Italy</option>
+<option value="84">Jordan</option>
+<option value="25">Kenya</option>
+<option value="89">Lebanon</option>
+<option value="29">Madagascar</option>
+<option value="30">Malawi</option>
+<option value="92">Maldives</option>
+<option value="33">Mauritius</option>
+<option value="191">Mexico</option>
+<option value="35">Morocco</option>
+<option value="94">Myanmar [Burma]</option>
+<option value="95">Nepal</option>
+<option value="97">Oman</option>
+<option value="150">Poland</option>
+<option value="151">Portugal</option>
+<option value="41">Réunion</option>
+<option value="44">Seychelles</option>
+<option value="157">Slovenia</option>
+<option value="104">South Korea</option>
+<option value="105">Sri Lanka</option>
+<option value="107">Taiwan</option>
+<option value="52">Tanzania</option>
+<option value="109">Thailand</option>
+<option value="110">Turkey</option>
+<option value="55">Uganda</option>
+<option value="206">United States</option>
+<option value="113">Uzbekistan</option>
+<option value="58">Zimbabwe</option>
+<option value="0" selected="selected">All</option>
+</select>                </span>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <span class="type">
+                    <label>Package Type</label>                    <select name="type" id="type" class="form-control">
+<option value="1">Honeymoon</option>
+<option value="2">HolidaysBox Special</option>
+<option value="3">Family</option>
+<option value="6">Luxurious</option>
+<option value="8">Adventure</option>
+<option value="0" selected="selected">All</option>
+</select>                </span>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <span class="duration">
+                    <label>Duration</label>                    <select name="duration" id="duration" class="form-control">
+<option value="1">11 Night 12 Days </option>
+<option value="2">7 Night 8 Days </option>
+<option value="3">4 Night 5 Days </option>
+<option value="4">6 Night 7 Days </option>
+<option value="5">9 Night 10 Days </option>
+<option value="6">8 Night 9 Days </option>
+<option value="7">5 Night 6 Days </option>
+<option value="8">6 Night 7 Days </option>
+<option value="9">10 Night 11 Days </option>
+<option value="10">3 Night 4 Days </option>
+<option value="12">0 Night 1 Days </option>
+<option value="13">12 Night 13 Days </option>
+<option value="15">14 Night 15 Days </option>
+<option value="0" selected="selected">All</option>
+</select>                </span>
+            </div>
+            <!--            <div class="col-sm-2 col-md-2" style="padding-left:0px;">
+            <label>&nbsp;</label>                            <button style="margin:0px; width:100%;" type="submit" class="btn btn-info green-btn">Search</button>
+                        </div>-->
+        </div>
+        </form>    </div>
+</div>
+<div id="map-canvas"></div>
+<div class="content-bottom">
+  <h2 style="text-align:center" class="bottom-headding">Holiday Box Type</h2>
+  <div class="center-section type-module">
+    <ul class="nav nav-pills">
+	      <li class="circle-box"> <a class="" href="holidaysbox-special.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/hb.jpg">
+        <div class="category-name">HolidaysBox Special</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="luxurious.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/regal.jpg">
+        <div class="category-name">Luxurious</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="honeymoon.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/honeymoon.jpg">
+        <div class="category-name">Honeymoon</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="adventure.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/adventure3.jpg">
+        <div class="category-name">Adventure</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="family.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/family1.jpg">
+        <div class="category-name">Family</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+          </ul>
+  </div>
+</div>
+<div class="footer-section">
+  <div class="footer-module text-center"> <a class="footera" href="index.html">Home</a> |
+	    <a class="footera" href="about-us.html">About Us</a> |
+        <a class="footera" href="faq.html">Faq</a> |
+        <a class="footera" href="careers.html">Careers</a> |
+        <a class="footera" href="mice-tours.html">MICE Tours</a> |
+        <a class="footera"  href="destinations.html">Holiday Destinations</a> | <a class="footera"  href="contact-us.html">Contact Us</a>
+    </ul>
+    <p class="footer-text">Copyright &copy; 2014-2017 holidaysbox.com. All Rights Reserved.</p>
+  </div>
+</div>
+<script src="js/jqeasy.dropdown.js" type="text/javascript"></script>
+</body></html>

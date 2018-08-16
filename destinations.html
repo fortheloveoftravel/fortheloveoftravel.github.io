@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   <!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3BC4pJyOg1LTKFYkZT2cNSQpDk0Cx0OY";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zopim Live Chat Script-->
+                    <title>Destinations </title>
+            <meta name = "keywords" content = "Destinations page">
+            <meta name = "DESCRIPTION" content = "Destinations">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Latest compiled and minified CSS -->
+        <link type="text/css" rel="stylesheet" href="assets/frontend/css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/style.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/colorbox.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/ionicons.min.css" />
+<link type="text/css" rel="stylesheet" href="assets/frontend/css/slicknav.css" />
+<script type="text/javascript" src="assets/js/jquery.min-1.7.1.js"></script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+<script type="text/javascript" src="assets/js/placeholder.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="assets/frontend/js/bootstrap-slider.js"></script>
+<script type="text/javascript" src="assets/frontend/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jqeasy.dropdown.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="assets/frontend/js/typeahead.js"></script>
+<script type="text/javascript" src="assets/frontend/js/frontend.js"></script>
+<script type="text/javascript" src="assets/frontend/js/jquery.slicknav.js"></script>
+<script type="text/javascript" defer="defer">var site_url="http://www.holidaysbox.com/";</script>        <script type="text/javascript">
+            var $ = jQuery.noConflict();
+            function processForm() {
+                $(".newsletter").removeClass('success');
+                $(".newsletter").removeClass('error');
+                $(".newsletter").text();
+                var email = $('#InputEmail').val();
+                var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/igm;
+                if (!re.test(email)) {
+                    $(".newsletter").text("Please Enter Valid Email Address");
+                    return false;
+                } else {
+                    var url = site_url + 'newsletter';
+                    $.ajax({
+                        url: url,
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {
+                            name: email
+                        },
+                        success: function (data) {
+                            $(".newsletter").text(data.message);
+                            if (data.error == 1) {
+                                $(".newsletter").text(data.message);
+                            } else if (data.success == 1) {
+                                $(".newsletter").text(data.message);
+                            }
+                            $('#InputEmail').val("");
+                        }
+                    });
+                }
+            }
+            $(document).ready(function () {
+                $("#newsletter-popup").hide();
+                $("#newletter").click(function () {
+                    $("#newsletter-popup").slideToggle("slow");
+                });
+            });
+            $(document).ready(function () {
+                $('#menu').slicknav();
+            });
+        </script>
+        <link rel='stylesheet' id='style-css'  href='assets/frontend/css/jquery.fancybox.css' type='text/css' media='all'>
+            <div id="popup"><a class="fancybox-effects-a" href="#inline" title=""></a>
+        <div style="display:none;">
+            <div id="inline">
+                <div style="background: #fff; padding: 20px; display: block;">
+                    <h3 class="page-header" style="text-align:center">Welcome to Holidaybox</h3>
+                    <div class="destinaton-module">
+                        <div id="carousel-gene1" class="" data-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                                    <div class="item clearfix active"><!-- slides -->
+                                        <ul class="nav nav-pills">
+                                                                                            <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="poland/central-europe-blend.html"><img src="uploads/thumbnails/Krakow.jpg" height="150" width="215" title="Central Europe Blend" alt="Central Europe Blend" /></a>
+                                                        <div class="product-price"><span class="pricesymbol">`</span>
+                                                            108000 ONWARDS                                                        </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="poland/central-europe-blend.html">Central Europe Blend</a></h2>
+                                                            <h3>Europe - Poland</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDKw1I9ZlI-piCBp2zXSuviBDVRjju-aYI&sensor=true&libraries=adsense"> </script>        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>        <script type="text/javascript" src="http://www.webestools.com/google_map_gen.js?lati=37.0625&long=-95.6770&zoom=4&width=675&height=400&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle=hello"></script>-->
+</head>
+<body class="js">
+    <!--header section-->
+    <div class="header-section">
+        <div class="center-block">
+            <h1 class="logo innerpage"><a href="index.html"><img src="assets/frontend/image/Take Me away Logo - Copy0.jpg" width="300" title="Holidays Box" alt="Holidays Box"/></a></h1>
+        </div>
+        <div class="follow-module">
+            <ul class="nav nav-pills">
+                <li class="sociali facebook"><a href="https://www.facebook.com/holidaysbox" target="_blank" title="Like us on Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li class="sociali twtr"><a href="https://twitter.com/holidaysbox" target="_blank" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li class="sociali p"><a href="#" title="Follow us on Pinterest"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <div class="center-block-menu">
+                <div class="left-menu pull-left">
+                    <div class="right-menu pull-left"> <a href="destinations.html">
+                            <h3 class="newletter menua" style="padding: 0px 15px;">Holiday Destinations</h3>
+                        </a> </div>
+                    <div class="menu-container">
+                        <ul class="nav nav-pills pull-left"  id="menu">
+                          <!--<li class=""> <a class="menua"  href="destinations.html">Holiday Destinations </a></li>-->
+                            <li class="menuli"><a class="menua"  href="index.html">Home</a></li>
+                                                            <li class="menuli "><a class="menua" href="about-us.html">About Us</a></li>
+                                                            <li class="menuli "><a class="menua" href="faq.html">Faq</a></li>
+                                                            <li class="menuli "><a class="menua" href="careers.html">Careers</a></li>
+                                                            <li class="menuli "><a class="menua" href="mice-tours.html">MICE Tours</a></li>
+                            <!--<li class=""> <a class="menua"  href="">MICE Tours </a></li>-->
+                            <li class="menuli"> <a style="border-right:none !important" class="menua"  href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="right-menu pull-right">
+                    <h3 class="newletter" id="newletter">Newsletter<img class="plus" src="assets/frontend/image/plus-icon.png" alt=""/></h3>
+                    <div class="newsletter-popup clearfix" id="newsletter-popup" style="display:none">
+                                                <div class="newsletter"> </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-xs-8 no-padding" style="padding-right: 0px;"> <input type="email" name="email" value="" id="InputEmail" placeholder="Enter Email ID" class="form-control newsletter-input" style=""  /> </div>
+                            <div class="col-lg-4 col-xs-4"><a onclick = "processForm();" class = "btn btn-primary">SUBMIT</a></div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="contact-module">                		<a href="#" class="pop-btn" data-toggle="popover" data-html="true" data-content="<div><b>Popover Example</b> 1 - Content</div>" title="Popover Example <b>1</b> - Title"><span class="glyphicon glyphicon-map-marker"></span></a>                                                <a href="#" tabindex="0" class="btn btn-lg btn-danger pop-btn" role="button" data-toggle="popover" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>                                                <a data-original-title="Delete" href="#" title="" data-toggle="tooltip" data-placement="right" class="pop-btn confirm clr-red"><i class="fa fa-trash-o "></i></a>                                                        <address>                                    <abbr title="Phone"><strong><span class="circle-blue"><i class="glyphicon glyphicon-phone-alt tele-icon"></i></span> Call Us:</strong></abbr> 0091-9833835566  /   0091-9322451334<br>                                    <span style="padding-left:70px"><strong><span class="circle-blue"><i class="glyphicon glyphicon-envelope tele-icon"></i></span> Email US:</strong> <a href="mailto:info@holidaysbox.com">info@holidaysbox.com</a></span>                                </address>                            </div>--> </div>
+        </div>
+    </div>
+    <div class="banner"> <!--banner-->
+                        <div class="banner-module">
+                    <div class="overlay"></div>
+                    <div class="center-section">
+                        <!--<h2 class="static-header"></h2>-->
+                    </div>
+                </div>
+                            <div class="bottom-slide innerpage">
+                <div class="slide-center_section  row">
+                                        <div class="col-sm-10 col-md-10 col-lg-10 right-box col-md-offset-2">
+                        <div class="pull-left">
+                            <form action="search.html" id="formsearch"  method="post" accept-charset="utf-8">                            
+                            <input type="text" value="" class="form-control pull-left search-box typeahead" id="search-box" placeholder="Enter your destination:Country" autocomplete="off" style="width:530px; margin: 0px;">
+                            <input type="hidden" id="searchkey" name="searchkey" class="form_control"/>
+                            <input type="submit" class="btn btn-info green-btn search" id="search" value="Search"/>
+                            <div class="alert alert-danger clear" id="error" style="display:none; padding:7px 10px;">Required</div>
+</form> </div>
+                        <span class="pull-right list-style"><i><a href="destinations.html" class="glyphicon glyphicon-th" title="List view">&nbsp;</a></i> <i><a href="mapview.html" class="glyphicon glyphicon-globe" title="Map view">&nbsp;</a></i></span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-6991837-68', 'auto');
+        ga('send', 'pageview');
+    </script>
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 849402052;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="googleads.g.doubleclick.net/pagead/viewthroughconversion/849402052/_guid_ON_amp_script_0.gif"/>
+</div>
+</noscript>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '227441094429491'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="www.facebook.com/tr_id_227441094429491_ev_PageView_noscript_1.gif"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">
+    window._tfa = window._tfa || [];
+    _tfa.push({ notify: 'action',name: 'Visit_Seychelles' });
+</script>
+<script src="cdn.taboola.com/libtrc/tsbi-sc/tfa.js"></script>
+<!--<script type="text/javascript" src="http://hydropeptide.com.au/assets/js/jquery.min.js"></script>-->
+<script>
+    $(document).on('change','#type',function(){
+        if($('#continent_id').val()){
+            var continentid=$('#continent_id').val();
+        }
+        if($('#country_id').val()){
+            var countryid=$('#country_id').val();
+        }
+        var val=$('#type').val();
+        $.ajax({
+            url: site_url+"get_category",
+            cache: false,
+            type: "GET",
+            dataType:'json',
+            data: {
+                id : val,
+                continentid:continentid,
+                countryid:countryid
+            },
+            success: function(data){ 
+                $('.top-destination').hide();
+                $('.other-destination').html('');
+                $('.other-destination').html(data.view);
+                var html_duration='';
+                html_duration='<select name="duration" class="form-control" id="duration">';
+                $.each(data.durations.duration, function(k, v) { 
+                    if(k==0){
+                        html_duration += '<option value="'+k+'">All</option>';                 
+                    }else{
+                        html_duration += '<option value="'+k+'">'+(v-1)+' night '+v+' days</option>';                 
+                    }
+                });
+                html_duration +="</select>";
+                $(".duration").html(html_duration);
+            }
+        });
+    });
+    $(document).on('change','#duration',function(){
+        //        alert($('#category_id').val())
+        if($('#category_id').val()){
+            var category_id=$('#category_id').val();
+        }
+        if($('#continent_id').val()){
+            var continentid=$('#continent_id').val();
+        }
+        if($('#country_id').val()){
+            var countryid=$('#country_id').val();
+        }
+        var val=$('#duration').val();
+        $.ajax({
+            url: site_url+"get_duration",
+            cache: false,
+            type: "GET",
+            dataType:'json',
+            data: {
+                id : val,
+                continentid:continentid,
+                countryid:countryid,
+                category_id:category_id
+            },
+            success: function(data){   
+                $('.top-destination').hide();
+                $('.other-destination').empty();
+                $('.other-destination').html(data.view);
+            }
+        });
+    });
+    $(document).on('click','.continent',function(){
+        var html_country='';
+        elem =$(this);
+        $.ajax({
+            url: site_url + "listpackage",
+            data: {
+                continent_id : $(this).attr('data')
+            },
+            dataType: "json",
+            success: function(data) {
+                console.log(data.subname);
+                $('.dropdown-listing').remove();
+                $('.top-destination').hide();
+                $('.other-destination').html('');
+                $('.other-destination').html(data.view);
+                var html_country='';
+                html_country='<ul class="dropdown-listing">';
+                $.each(data.countries, function(k, v) {
+                    console.log(k);
+                    if(k!='')		
+                    html_country += '<li><a href="javascript:void(0)" class="countries" data="'+k+'">'+v+'</a></li>';                 
+            });
+            html_country +="</ul>";
+            elem.parent(".div-listing").append(html_country);
+            elem.parents(".div-listing").addClass('open');
+        }
+    });
+});
+$(document).on('click','.countries',function(){
+    $.ajax({
+        url: site_url + "listpackage",
+        data: {
+            country_id : $(this).attr('data')
+        },
+        dataType: "json",
+        success: function(data) {
+            $('.top-destination').hide();
+            $('.other-destination').html('');
+            $('.other-destination').html(data.view);
+        }
+    });
+});
+$(document).ready(function(){
+  height = $('.content-section').height() - 250;
+  var div_top = $('.sidebar_fix').offset().top;
+  $( window ).scroll(function() { 
+	//if(($(this).scrollTop() )
+    if($(this).scrollTop() > div_top && $(this).scrollTop() < height ) {
+        $( ".sidebar_fix" ).addClass("fixed-pos");
+    } else {
+        $( ".sidebar_fix" ).removeClass("fixed-pos");
+    }
+});
+  }) 
+//    jQuery(document).ready(function() {
+//
+//                var div = jQuery('.sidebar-fix');
+//               alert("Df");
+//                var start = jQuery(div).offset().top;
+//                alert(start);
+//                jQuery.event.add(window, "scroll", function() {
+//                    
+//                    var p = jQuery(window).scrollTop();
+//                    jQuery(div).css('position',((p)>start) ? 'fixed' : 'static');
+//                    jQuery(div).css('top',((p)>start) ? '0px' : '');
+//                });
+//
+//    });
+</script>
+<style>
+    /*    .header {
+            height:100px;
+            background:#ffe1d8;
+            width:100%;
+    }*/
+    /*.converter {
+            height:100px;
+            background:#9fff42;
+            width:100%;
+    }
+    .content {
+            width:100%;
+            background:#faff70;
+            min-height:800px;
+    }*/
+    .fixed-pos {
+        position:fixed;
+        top: 48px;
+        z-index:1000; width:230px;
+    }
+</style>
+<!--<style>
+    .fixed {position:fixed; top:0; left:0;}
+</style>-->
+<div class="content-section">
+    <div class="center-section">
+        <!--<div class="right-box">-->
+        <!--</div>-->
+        <div class="clearfix">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-9 main-container">
+                <ol class="breadcrumb">
+                    <li> <a href="index.html">HOME</a> </li>
+                    <li class="active">Destinations</li>
+                </ol>
+                <div class="top-destination">
+                    <h3 class="page-header" style="text-align:center">Top Destination</h3>
+                    <p class="destination-text">More than 22,759 people have trusted us with their holiday planning</p>
+                    <div class="destinaton-module">
+                        <div id="carousel-generic" class="carousel slide" data-ride="carousel"> 
+                                                        <div class="carousel-inner">
+                                                                    <div class="item clearfix active"><!-- slides -->
+                                        <ul class="nav nav-pills">
+                                                                                            <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="fiji/the-fijian-dream-honeymoon-package.html"><img src="uploads/thumbnails/fiji-2.jpg" height="150" width="215" title="The Fijian Dream Honeymoon Package" alt="The Fijian Dream Honeymoon Package" /></a>
+                                                        <div class="product-price">
+                                                            <span class="pricesymbol">`</span>
+                                                            159000 ONWARDS </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="fiji/the-fijian-dream-honeymoon-package.html">The Fijian Dream Honeymoon Package</a></h2>                                                             <h3>Oceania -  
+                                                                Fiji</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="taiwan/tantalizing-taiwan.html"><img src="uploads/thumbnails/Screen_Shot_2016-04-11_at_1.15_.22_pm_.png" height="150" width="215" title="Tantalizing Taiwan" alt="Tantalizing Taiwan" /></a>
+                                                        <div class="product-price">
+                                                            <span class="pricesymbol">`</span>
+                                                            55000 ONWARDS </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="taiwan/tantalizing-taiwan.html">Tantalizing Taiwan</a></h2>                                                             <h3>Asia -  
+                                                                Taiwan</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="seychelles/splendid-seychelles.html"><img src="uploads/thumbnails/Screen_Shot_2015-08-05_at_7.01_.01_pm_.png" height="150" width="215" title="Splendid Seychelles" alt="Splendid Seychelles" /></a>
+                                                        <div class="product-price">
+                                                            <span class="pricesymbol">`</span>
+                                                            77000 ONWARDS </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="seychelles/splendid-seychelles.html">Splendid Seychelles</a></h2>                                                             <h3>Africa -  
+                                                                Seychelles</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                        </ul>
+                                    </div>
+                                                                    <div class="item clearfix "><!-- slides -->
+                                        <ul class="nav nav-pills">
+                                                                                            <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="portugal/bespoke-algarve-portugal.html"><img src="uploads/thumbnails/Algarve_Coast_attr_101.jpg" height="150" width="215" title="Bespoke Algarve Portugal" alt="Bespoke Algarve Portugal" /></a>
+                                                        <div class="product-price">
+                                                            <span class="pricesymbol">`</span>
+                                                            77700 ONWARDS </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="portugal/bespoke-algarve-portugal.html">Bespoke Algarve Portugal</a></h2>                                                             <h3>Europe -  
+                                                                Portugal</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="product-listion">
+                                                                                                                <a class="product-img" href="maldives/magical-maldives.html"><img src="uploads/thumbnails/maldives-water-villa.png" height="150" width="215" title="Magical Maldives" alt="Magical Maldives" /></a>
+                                                        <div class="product-price">
+                                                            <span class="pricesymbol">`</span>
+                                                            35000 ONWARDS </div>
+                                                        <div class="product-details">
+                                                            <h2><a href="maldives/magical-maldives.html">Magical Maldives</a></h2>                                                             <h3>Asia -  
+                                                                Maldives</h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                                                        </ul>
+                                    </div>
+                                                            </div>
+                            <!-- Wrapper for slides -->
+                            <!-- Controls --> 
+                            <a class="left carousel-control" href="#carousel-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+                            <a class="right carousel-control" href="#carousel-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <hr>
+                <div class="destinaton-module other-destination">
+                <h3 class="page-header destination" style="text-align:center">OTHER DESTINATIONS</h3>
+                    <ul class="nav nav-pills">
+                                                        <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="seychelles/ultimate-seychelles-honeymoon-experience.html"><img src="uploads/thumbnails/475-5f3b9f4a594e4d6fece4cf51e181a23e.jpg" height="150" width="215" title="Ultimate Seychelles Honeymoon Experience" alt="Ultimate Seychelles Honeymoon Experience" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            125000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="seychelles/ultimate-seychelles-honeymoon-experience.html">Ultimate Seychelles Honeymoon Experience</a></h2>                                             <h3>Africa -  
+                                                Seychelles</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="seychelles/serene-seychelles-.html"><img src="uploads/thumbnails/Seychelles-_Package1.jpg" height="150" width="215" title="Serene Seychelles " alt="Serene Seychelles " /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            68888 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="seychelles/serene-seychelles-.html">Serene Seychelles </a></h2>                                             <h3>Africa -  
+                                                Seychelles</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="fiji/the-fijian-dream-honeymoon-package.html"><img src="uploads/thumbnails/fiji-2.jpg" height="150" width="215" title="The Fijian Dream Honeymoon Package" alt="The Fijian Dream Honeymoon Package" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            159000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="fiji/the-fijian-dream-honeymoon-package.html">The Fijian Dream Honeymoon Package</a></h2>                                             <h3>Oceania -  
+                                                Fiji</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="reunion/romance-in-reunion-island.html"><img src="uploads/thumbnails/reunion_helicopter.jpg" height="150" width="215" title="Romance in Reunion Island" alt="Romance in Reunion Island" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            91000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="reunion/romance-in-reunion-island.html">Romance in Reunion Island</a></h2>                                             <h3>Africa -  
+                                                Réunion</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="taiwan/tantalizing-taiwan.html"><img src="uploads/thumbnails/Screen_Shot_2016-04-11_at_1.15_.22_pm_.png" height="150" width="215" title="Tantalizing Taiwan" alt="Tantalizing Taiwan" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            55000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="taiwan/tantalizing-taiwan.html">Tantalizing Taiwan</a></h2>                                             <h3>Asia -  
+                                                Taiwan</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="seychelles/seychelles-extended-weekend-budget.html"><img src="uploads/thumbnails/Berjaya-Beau-Vallon-Bay-Resort--Casino-Resort_Entrance_Night.jpg" height="150" width="215" title="Seychelles Extended Weekend Budget" alt="Seychelles Extended Weekend Budget" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            52000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="seychelles/seychelles-extended-weekend-budget.html">Seychelles Extended Weekend Budget</a></h2>                                             <h3>Africa -  
+                                                Seychelles</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="south-korea/kinetic-korea.html"><img src="uploads/thumbnails/south-korea.jpg" height="150" width="215" title="Kinetic Korea" alt="Kinetic Korea" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            52000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="south-korea/kinetic-korea.html">Kinetic Korea</a></h2>                                             <h3>Asia -  
+                                                South Korea</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="croatia/discover-croatia.html"><img src="uploads/thumbnails/Screen_Shot_2015-12-22_at_10.18_.27_pm_1.png" height="150" width="215" title="Discover Croatia" alt="Discover Croatia" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            58800 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="croatia/discover-croatia.html">Discover Croatia</a></h2>                                             <h3>Europe -  
+                                                Croatia</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="seychelles/splendid-seychelles.html"><img src="uploads/thumbnails/Screen_Shot_2015-08-05_at_7.01_.01_pm_.png" height="150" width="215" title="Splendid Seychelles" alt="Splendid Seychelles" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            77000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="seychelles/splendid-seychelles.html">Splendid Seychelles</a></h2>                                             <h3>Africa -  
+                                                Seychelles</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="iceland/iceland-and-finland-fusion.html"><img src="uploads/thumbnails/Northern-Lights-Iceland1.jpg" height="150" width="215" title="Iceland and Finland Fusion" alt="Iceland and Finland Fusion" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            121000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="iceland/iceland-and-finland-fusion.html">Iceland and Finland Fusion</a></h2>                                             <h3>Europe -  
+                                                Iceland</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="seychelles/constance-ephelia-seychelles-package.html"><img src="uploads/thumbnails/constance-1.jpg" height="150" width="215" title="Constance Ephelia Seychelles Package" alt="Constance Ephelia Seychelles Package" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            110000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="seychelles/constance-ephelia-seychelles-package.html">Constance Ephelia Seychelles Package</a></h2>                                             <h3>Africa -  
+                                                Seychelles</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="georgia/gems-of-georgia.html"><img src="uploads/thumbnails/Screen_Shot_2015-11-02_at_8.31_.01_pm_.png" height="150" width="215" title="Gems of Georgia" alt="Gems of Georgia" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            45900 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="georgia/gems-of-georgia.html">Gems of Georgia</a></h2>                                             <h3>Asia -  
+                                                Georgia</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="italy/idyllic-italy.html"><img src="uploads/thumbnails/Fernanda-I-Italy.jpg" height="150" width="215" title="Idyllic Italy" alt="Idyllic Italy" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            125000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="italy/idyllic-italy.html">Idyllic Italy</a></h2>                                             <h3>Europe -  
+                                                Italy</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="indonesia/true-bali-honeymoon-experience.html"><img src="uploads/thumbnails/282.jpg" height="150" width="215" title="True Bali Honeymoon Experience" alt="True Bali Honeymoon Experience" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            28800 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="indonesia/true-bali-honeymoon-experience.html">True Bali Honeymoon Experience</a></h2>                                             <h3>Asia -  
+                                                Indonesia</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="reunion/reunion-island.html"><img src="uploads/thumbnails/reunion_volcano.jpg" height="150" width="215" title="Reunion Island" alt="Reunion Island" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            45000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="reunion/reunion-island.html">Reunion Island</a></h2>                                             <h3>Africa -  
+                                                Réunion</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="hong-kong/hongkong-and-macau.html"><img src="uploads/thumbnails/hongkong.jpg" height="150" width="215" title="Hongkong and macau" alt="Hongkong and macau" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            30000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="hong-kong/hongkong-and-macau.html">Hongkong and macau</a></h2>                                             <h3>Asia -  
+                                                Hong Kong</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="armenia/absolute-armenia-.html"><img src="uploads/thumbnails/15146897329_959c5da81e_k.jpg" height="150" width="215" title="Absolute Armenia " alt="Absolute Armenia " /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            43500 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="armenia/absolute-armenia-.html">Absolute Armenia </a></h2>                                             <h3>Asia -  
+                                                Armenia</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="egypt/experience-egypt-and-nile-cruise.html"><img src="uploads/thumbnails/9680459832_48d5b12ae6_b.jpg" height="150" width="215" title="Experience Egypt and Nile Cruise" alt="Experience Egypt and Nile Cruise" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            35555 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="egypt/experience-egypt-and-nile-cruise.html">Experience Egypt and Nile Cruise</a></h2>                                             <h3>Africa -  
+                                                Egypt</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="kenya/kenyan-quest.html"><img src="uploads/thumbnails/echo-grandkids-adj.jpg" height="150" width="215" title="Kenyan Quest" alt="Kenyan Quest" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            92000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="kenya/kenyan-quest.html">Kenyan Quest</a></h2>                                             <h3>Africa -  
+                                                Kenya</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="lebanon/discover-lebanon.html"><img src="uploads/thumbnails/anj-5.jpg" height="150" width="215" title="Discover Lebanon" alt="Discover Lebanon" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            45999 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="lebanon/discover-lebanon.html">Discover Lebanon</a></h2>                                             <h3>Asia -  
+                                                Lebanon</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="egypt/exclusive-egypt.html"><img src="uploads/thumbnails/sphinx.jpg" height="150" width="215" title="Exclusive Egypt" alt="Exclusive Egypt" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            23500 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="egypt/exclusive-egypt.html">Exclusive Egypt</a></h2>                                             <h3>Africa -  
+                                                Egypt</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="mauritius/majestic-mauritius.html"><img src="uploads/thumbnails/images-21.jpg" height="150" width="215" title="Majestic Mauritius" alt="Majestic Mauritius" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            28999 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="mauritius/majestic-mauritius.html">Majestic Mauritius</a></h2>                                             <h3>Africa -  
+                                                Mauritius</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="uganda/unforgettable-uganda.html"><img src="uploads/thumbnails/ugandatourdestination.jpg" height="150" width="215" title="Unforgettable Uganda" alt="Unforgettable Uganda" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            158000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="uganda/unforgettable-uganda.html">Unforgettable Uganda</a></h2>                                             <h3>Africa -  
+                                                Uganda</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="lebanon/leisurely-lebanon.html"><img src="uploads/thumbnails/Lebanon3.jpg" height="150" width="215" title="Leisurely Lebanon" alt="Leisurely Lebanon" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            65999 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="lebanon/leisurely-lebanon.html">Leisurely Lebanon</a></h2>                                             <h3>Asia -  
+                                                Lebanon</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="poland/central-europe-blend.html"><img src="uploads/thumbnails/Krakow.jpg" height="150" width="215" title="Central Europe Blend" alt="Central Europe Blend" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            108000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="poland/central-europe-blend.html">Central Europe Blend</a></h2>                                             <h3>Europe -  
+                                                Poland</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="portugal/bespoke-algarve-portugal.html"><img src="uploads/thumbnails/Algarve_Coast_attr_101.jpg" height="150" width="215" title="Bespoke Algarve Portugal" alt="Bespoke Algarve Portugal" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            77700 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="portugal/bespoke-algarve-portugal.html">Bespoke Algarve Portugal</a></h2>                                             <h3>Europe -  
+                                                Portugal</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="sri-lanka/scenic-sri-lanka.html"><img src="uploads/thumbnails/002_temple-rupestre-de-dambulla_theredlist.jpg" height="150" width="215" title="Scenic Sri Lanka" alt="Scenic Sri Lanka" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            40000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="sri-lanka/scenic-sri-lanka.html">Scenic Sri Lanka</a></h2>                                             <h3>Asia -  
+                                                Sri Lanka</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="bhutan/bhutan-diaries.html"><img src="uploads/thumbnails/bhutan3.jpg" height="150" width="215" title="Bhutan Diaries" alt="Bhutan Diaries" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            21000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="bhutan/bhutan-diaries.html">Bhutan Diaries</a></h2>                                             <h3>Asia -  
+                                                Bhutan</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="zimbabwe/zoom-to-zimbabwe.html"><img src="uploads/thumbnails/Vic-Falls-3.jpg" height="150" width="215" title="Zoom to Zimbabwe" alt="Zoom to Zimbabwe" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            90000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="zimbabwe/zoom-to-zimbabwe.html">Zoom to Zimbabwe</a></h2>                                             <h3>Africa -  
+                                                Zimbabwe</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="uzbekistan/ultimate-uzbekistan.html"><img src="uploads/thumbnails/Uzbekistan-1080x1920.jpg" height="150" width="215" title="Ultimate Uzbekistan" alt="Ultimate Uzbekistan" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            44000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="uzbekistan/ultimate-uzbekistan.html">Ultimate Uzbekistan</a></h2>                                             <h3>Asia -  
+                                                Uzbekistan</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="oman/outstanding-oman.html"><img src="uploads/thumbnails/27_Sur-21.jpg" height="150" width="215" title="Outstanding Oman" alt="Outstanding Oman" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            40999 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="oman/outstanding-oman.html">Outstanding Oman</a></h2>                                             <h3>Asia -  
+                                                Oman</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="tanzania/zanzibar-island-escape.html"><img src="uploads/thumbnails/uw-room.jpg" height="150" width="215" title="Zanzibar Island Escape" alt="Zanzibar Island Escape" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            55000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="tanzania/zanzibar-island-escape.html">Zanzibar Island Escape</a></h2>                                             <h3>Africa -  
+                                                Tanzania</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="estonia/the-grand-baltic-trip.html"><img src="uploads/thumbnails/traku-zeme_lt.jpg" height="150" width="215" title="The Grand Baltic Trip" alt="The Grand Baltic Trip" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            67000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="estonia/the-grand-baltic-trip.html">The Grand Baltic Trip</a></h2>                                             <h3>Europe -  
+                                                Estonia</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="madagascar/memorable-madagascar.html"><img src="uploads/thumbnails/Lemur.jpg" height="150" width="215" title="Memorable Madagascar" alt="Memorable Madagascar" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            75000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="madagascar/memorable-madagascar.html">Memorable Madagascar</a></h2>                                             <h3>Africa -  
+                                                Madagascar</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="maldives/magical-maldives.html"><img src="uploads/thumbnails/maldives-water-villa.png" height="150" width="215" title="Magical Maldives" alt="Magical Maldives" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            35000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="maldives/magical-maldives.html">Magical Maldives</a></h2>                                             <h3>Asia -  
+                                                Maldives</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="bulgaria/beguiling-bulgaria.html"><img src="uploads/thumbnails/Bulgaria-1-Pirin-National-Park1.jpg" height="150" width="215" title="Beguiling Bulgaria" alt="Beguiling Bulgaria" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            55000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="bulgaria/beguiling-bulgaria.html">Beguiling Bulgaria</a></h2>                                             <h3>Europe -  
+                                                Bulgaria</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="jordan/jump-to-jordan.html"><img src="uploads/thumbnails/Petra.jpg" height="150" width="215" title="Jump to Jordan" alt="Jump to Jordan" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            45000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="jordan/jump-to-jordan.html">Jump to Jordan</a></h2>                                             <h3>Asia -  
+                                                Jordan</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="thailand/karismatic-koh-samui-.html"><img src="uploads/thumbnails/download-1.jpg" height="150" width="215" title="Karismatic Koh Samui " alt="Karismatic Koh Samui " /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            30000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="thailand/karismatic-koh-samui-.html">Karismatic Koh Samui </a></h2>                                             <h3>Asia -  
+                                                Thailand</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="greece/gorgeous-greece.html"><img src="uploads/thumbnails/greece-honeymoon1.jpg" height="150" width="215" title="Gorgeous Greece" alt="Gorgeous Greece" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            65000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="greece/gorgeous-greece.html">Gorgeous Greece</a></h2>                                             <h3>Europe -  
+                                                Greece</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="turkey/terrific-turkey.html"><img src="uploads/thumbnails/turkey-country-1471.jpg" height="150" width="215" title="Terrific Turkey" alt="Terrific Turkey" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            45000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="turkey/terrific-turkey.html">Terrific Turkey</a></h2>                                             <h3>Asia -  
+                                                Turkey</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="egypt/empirical-egypt.html"><img src="uploads/thumbnails/Egypt.jpg" height="150" width="215" title="Empirical Egypt" alt="Empirical Egypt" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            35000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="egypt/empirical-egypt.html">Empirical Egypt</a></h2>                                             <h3>Africa -  
+                                                Egypt</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="mauritius/mauritius-and-the-reunion-island.html"><img src="uploads/thumbnails/images-3.jpg" height="150" width="215" title="Mauritius and The Reunion Island" alt="Mauritius and The Reunion Island" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            60000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="mauritius/mauritius-and-the-reunion-island.html">Mauritius and The Reunion Island</a></h2>                                             <h3>Africa -  
+                                                Mauritius</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="kenya/wild-kenya.html"><img src="uploads/thumbnails/Safari-in-Kenya.jpg" height="150" width="215" title="Wild Kenya" alt="Wild Kenya" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            65000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="kenya/wild-kenya.html">Wild Kenya</a></h2>                                             <h3>Africa -  
+                                                Kenya</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="index.html"><img src="uploads/thumbnails/MYANMAR_Schwedigon-Temples.jpg" height="150" width="215" title="Classic Myanmar" alt="Classic Myanmar" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            65000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="index.html">Classic Myanmar</a></h2>                                             <h3>Asia -  
+                                                Myanmar [Burma]</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="poland/phenomenal-poland.html"><img src="uploads/thumbnails/poland-winter.png" height="150" width="215" title="Phenomenal Poland" alt="Phenomenal Poland" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            85000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="poland/phenomenal-poland.html">Phenomenal Poland</a></h2>                                             <h3>Europe -  
+                                                Poland</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="iceland/inspiring-iceland.html"><img src="uploads/thumbnails/iceland-northern-lights.png" height="150" width="215" title="Inspiring Iceland" alt="Inspiring Iceland" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            145000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="iceland/inspiring-iceland.html">Inspiring Iceland</a></h2>                                             <h3>Europe -  
+                                                Iceland</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="india/golden-triangle-package.html"><img src="uploads/thumbnails/golden-triangle-agra.jpg" height="150" width="215" title="Golden Triangle Package" alt="Golden Triangle Package" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            17000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="india/golden-triangle-package.html">Golden Triangle Package</a></h2>                                             <h3>Asia -  
+                                                India</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="madagascar/zimbabwe-exploration.html"><img src="uploads/thumbnails/zimbabwe_cheetah.jpg" height="150" width="215" title="Zimbabwe Exploration" alt="Zimbabwe Exploration" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            120000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="madagascar/zimbabwe-exploration.html">Zimbabwe Exploration</a></h2>                                             <h3>Africa -  
+                                                Madagascar</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="ecuador/exciting-ecuador.html"><img src="uploads/thumbnails/ecuador5.jpg" height="150" width="215" title="Exciting Ecuador" alt="Exciting Ecuador" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            95000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="ecuador/exciting-ecuador.html">Exciting Ecuador</a></h2>                                             <h3>South America -  
+                                                Ecuador</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="product-listion">
+                                                                                <a class="product-img" href="kenya/kenyan-safari.html"><img src="uploads/thumbnails/Silhouette-African-Lion.jpg" height="150" width="215" title="Kenyan Safari" alt="Kenyan Safari" /></a>
+                                        <div class="product-price">
+                                            <span class="pricesymbol">`</span>
+                                            70000 ONWARDS</div>
+                                        <div class="product-details">
+                                            <h2><a href="kenya/kenyan-safari.html">Kenyan Safari</a></h2>                                             <h3>Africa -  
+                                                Kenya</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                                    </ul>
+                    <div class = "pull-right paginationlinks">
+                        <div class="pull-right"><ul class="pagination" style="margin-right:10px"><li><span class="">1</span></li><li><a href="destinations/4.html">2</a></li><li><a href="destinations/8.html">3</a></li><li class="gray-bg"><a href="destinations/4.html">&raquo; &nbsp;</a></li><li><a href="destinations/48.html">Last</a></li></ul></div>                    </div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <!--<button class="btn btn-info lodng-btn" type="button">Loading More</button>-->
+            </div>
+            <div class="col-md-3 sidebar">
+                <div class="sidebar_fix">
+                    <a class="pull-right" href="destinations.html">Clear</a>
+                    <div class="">
+                        <div class="list-group">
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="1" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        Africa                                    </a></div>
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="2" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        Antarctica                                    </a></div>
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="3" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        Asia                                    </a></div>
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="4" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        Europe                                    </a></div>
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="5" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        North America                                    </a></div>
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="6" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        Oceania                                    </a></div>
+                                                            <div class="div-listing"><a href="javascript:void(0)" data="7" class="list-group-item dropdown-toggle continent" id="category_drop">
+                                        South America                                    </a></div>
+                                                    </div>
+                        <div class="list-group">
+                            <form action="destinations.html" method="post" accept-charset="utf-8">                            <div class="type list-group-item">
+                                <label>Package Type</label>                                <select name="type" id='type' class='form-control'>
+<option value="1">Honeymoon</option>
+<option value="2">HolidaysBox Special</option>
+<option value="3">Family</option>
+<option value="6">Luxurious</option>
+<option value="8">Adventure</option>
+<option value="0" selected="selected">All</option>
+</select>                            </div>
+                            <div class="duration list-group-item" style="padding-top:10px">
+                                <label>Duration</label>                                <select name="duration" id="duration" class="form-control">
+<option value="1">11 Night 12 Days </option>
+<option value="2">7 Night 8 Days </option>
+<option value="3">4 Night 5 Days </option>
+<option value="4">6 Night 7 Days </option>
+<option value="5">9 Night 10 Days </option>
+<option value="6">8 Night 9 Days </option>
+<option value="7">5 Night 6 Days </option>
+<option value="8">6 Night 7 Days </option>
+<option value="9">10 Night 11 Days </option>
+<option value="10">3 Night 4 Days </option>
+<option value="12">0 Night 1 Days </option>
+<option value="13">12 Night 13 Days </option>
+<option value="15">14 Night 15 Days </option>
+<option value="0" selected="selected">All</option>
+</select>                            </div>                    
+                            </form> 
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    <div class="content-bottom">
+        <h2 style="text-align:center" class="bottom-headding">Holiday Box Type</h2>
+        <p style="text-align:center;color:#ffffff">More than 22,759 people have trusted us with their holiday planning</p>
+        <div class="center-section">
+            <ul class="nav nav-pills circle-box-container">
+                    <li class="circle-box hm-box"> <a class="" href=""><img class="circle-box" width="100" height="100" title="" alt="" src="http://www.holidaysbox.com/uploads/thumbnails/"><div class=""></div></a></li>
+                        <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                        <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                        <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                        <li class="circle-box hs-box"><a class="circla" href=""></a></li>
+            </ul>
+        </div>
+    </div>-->
+<div class="content-bottom">
+  <h2 style="text-align:center" class="bottom-headding">Holiday Box Type</h2>
+  <div class="center-section type-module">
+    <ul class="nav nav-pills">
+	      <li class="circle-box"> <a class="" href="holidaysbox-special.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/hb.jpg">
+        <div class="category-name">HolidaysBox Special</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="luxurious.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/regal.jpg">
+        <div class="category-name">Luxurious</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="honeymoon.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/honeymoon.jpg">
+        <div class="category-name">Honeymoon</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="adventure.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/adventure3.jpg">
+        <div class="category-name">Adventure</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+            <li class="circle-box"> <a class="" href="family.html"><img class="cicle-image" width="100" height="100" title="" alt="" src="uploads/thumbnails/family1.jpg">
+        <div class="category-name">Family</div>
+        </a></li>
+      <!--                <li class="circle-box advcr-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box family-box"><a class="circla" href=""></a></li>
+                    <li class="circle-box luxry-box"><a  class="circla" href=""></a></li>
+                    <li class="circle-box hs-box"><a class="circla" href=""></a></li>-->
+          </ul>
+  </div>
+</div>
+<div class="footer-section">
+  <div class="footer-module text-center"> <a class="footera" href="index.html">Home</a> |
+	    <a class="footera" href="about-us.html">About Us</a> |
+        <a class="footera" href="faq.html">Faq</a> |
+        <a class="footera" href="careers.html">Careers</a> |
+        <a class="footera" href="mice-tours.html">MICE Tours</a> |
+        <a class="footera"  href="destinations.html">Holiday Destinations</a> | <a class="footera"  href="contact-us.html">Contact Us</a>
+    </ul>
+    <p class="footer-text">Copyright &copy; 2014-2017 holidaysbox.com. All Rights Reserved.</p>
+  </div>
+</div>
+<script src="js/jqeasy.dropdown.js" type="text/javascript"></script>
+</body></html>
